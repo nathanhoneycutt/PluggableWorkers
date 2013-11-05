@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pluggableWorkers>
+	<workers>
+		<worker name="Testing1" type="PluggableWorkers.Tests.NoWorker,PluggableWorkers.Tests">
+			<StringValue>This does not matter</StringValue>
+		</worker>
+	</workers>
+</pluggableWorkers>

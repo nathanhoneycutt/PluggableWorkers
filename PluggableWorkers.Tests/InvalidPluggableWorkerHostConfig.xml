@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<invalid>
+  <workers>
+	<worker name="Testing1" type="PluggableWorkers.Tests.TestWorker,PluggableWorkers.Tests">
+		<StringValue>String Value 1</StringValue>
+		<IntValue>1</IntValue>
+		<DateValue>1/1/2012</DateValue>
+	</worker>
+  </workers>
+</invalid>
