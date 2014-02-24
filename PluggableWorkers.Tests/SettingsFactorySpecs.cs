@@ -151,5 +151,34 @@ namespace PluggableWorkers.Tests
                                              });
             }
         }
+
+        public class when_building_settings_with_a_comma_for_a_character_data_type : SpecsFor<SettingsFactory>
+        {
+            public class Settings
+            {
+                public char Delimiter { get; set; }
+            }
+
+            private Settings _settings;
+
+            protected override void When()
+            {
+                _settings = SUT.GetSettingsFor(typeof (Settings),
+                                               new Dictionary<string, string>
+                                                   {
+                                                       {"Delimiter", ","}
+                                                   }) as Settings;
+            }
+
+            [Test]
+            public void then_it_build_the_correct_settings_object()
+            {
+                _settings.ShouldLookLike(new Settings
+                                             {
+                                                 Delimiter = ','
+                                             });
+            }
+
+        }
     }
 }

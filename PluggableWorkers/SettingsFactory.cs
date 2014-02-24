@@ -29,7 +29,7 @@ namespace PluggableWorkers
 
         private static object ConvertPrimitiveType(Type targetType, string rawValue)
         {
-            if (targetType != typeof (string))
+            if (targetType != typeof (string) && targetType != typeof(char))
                 rawValue = rawValue.Replace(",", "");
 
             return Convert.ChangeType(rawValue, targetType);
