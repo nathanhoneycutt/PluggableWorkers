@@ -16,15 +16,15 @@ public class SampleWorker : IDoWork
 {
 	private readonly Settings _settings;
 	
-	public SampleWorker(Settings settings, ILog log)
+	public SampleWorker(Settings settings)
 	{
 		_settings = settings;
-		_log = log;
 	}
 	
 	public bool Invoke()
 	{
-		_log.Info("Whatever you want to do, do it here.");
+		Console.WriteLine("Whatever you want to do to, do it here.");
+		return true;
 	}
 	
 	public class Settings
