@@ -5,17 +5,17 @@ and has settings defined that match the Settings class contained within the type
 -->
 <pluggableWorkers>
 	<workers>
-    <!--
-    If you're loading workers in another assembly, remember that the type must be fully specified.  For example:
-    <worker name="Sample" type="YourAssembly.Worker,YourAssembly"
-    -->
-		<worker name="Sample" type="PluggableWorkers.SampleWorker">
+	<!--
+	If you're loading workers in another assembly, remember that the type must be fully specified.  For example:
+	<worker name="Sample" type="YourAssembly.Worker,YourAssembly"
+	-->
+		<worker name="Sample" type="PluggableWorkers.SampleWorker,PluggableWorkers">
 			<TestString>Some string</TestString>
-      <TestInts>1</TestInts>
+			<TestInts>1</TestInts>
 		</worker>
-		<worker name="Sample2" type="PluggableWorkers.SampleWorker">
-			<TestString>Seocnd worker, test string</TestString>
-      <TestInts>1;2;3;4;5</TestInts>
+		<worker name="Sample2" type="PluggableWorkers.SampleWorker,PluggableWorkers">
+			<TestString>Second worker, test string</TestString>
+			<TestInts>1;2;3;4;5</TestInts>
 		</worker>
 	</workers>
 </pluggableWorkers>
